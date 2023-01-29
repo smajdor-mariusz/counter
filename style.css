@@ -1,11 +1,98 @@
+:root {
+  --font-clr: #eaf1f4;
+  --bg-clr: #253f4b;
+  --green: #5cb85c;
+  --yellow: #f0ad4e;
+  --red: #d9534f;
+}
 html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  background-color: var(--bg-clr);
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.title {
+  margin: 0;
+  color: var(--font-clr);
+}
+
+.counter {
+  font-weight: bold;
+  font-size: 2em;
+  color: #7b4d99;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 575px) {
+  .buttons {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 10%;
+  }
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: var(--font-clr);
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background ease 0.3s;
+}
+
+.button:hover {
+  background-color: var(--bg-clr);
+}
+
+.decrease {
+  border: 2px solid var(--red);
+  background-color: var(--red);
+}
+
+.decrease:hover {
+  color: var(--red);
+}
+
+.reset {
+  border: 2px solid var(--yellow);
+  background-color: var(--yellow);
+}
+
+.reset:hover {
+  color: var(--yellow);
+}
+
+.increase {
+  border: 2px solid var(--green);
+  background-color: var(--green);
+}
+
+.increase:hover {
+  color: var(--green);
 }
