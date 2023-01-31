@@ -5,6 +5,7 @@
   --yellow: #f0ad4e;
   --red: #d9534f;
 }
+
 html {
   box-sizing: border-box;
 }
@@ -40,6 +41,24 @@ body {
   font-weight: bold;
   font-size: 2em;
   color: #7b4d99;
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--font-clr);
+  font-size: 1.5rem;
+}
+
+.input {
+  padding: 8px 16px;
+  width: 100px;
+  border: 2px solid var(--font-clr);
+  border-radius: 4px;
+  background-color: var(--bg-clr);
+  color: var(--font-clr);
+  font-size: 1.2rem;
 }
 
 .buttons {
