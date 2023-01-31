@@ -4,6 +4,11 @@
   --green: #5cb85c;
   --yellow: #f0ad4e;
   --red: #d9534f;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 50px;
 }
 
 html {
@@ -26,10 +31,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: var(--space-lg);
   max-width: 991px;
   margin: 0 auto;
-  padding: 50px;
+  padding: var(--space-lg);
 }
 
 .title {
@@ -45,17 +50,17 @@ body {
 
 .step {
   display: flex;
-  gap: 10px;
+  gap: var(--space-sm);
   align-items: center;
   color: var(--font-clr);
   font-size: 1.5rem;
 }
 
 .input {
-  padding: 8px 16px;
+  padding: var(--space-sm) var(--space-md);
   width: 100px;
   border: 2px solid var(--font-clr);
-  border-radius: 4px;
+  border-radius: var(--space-xs);
   background-color: var(--bg-clr);
   color: var(--font-clr);
   font-size: 1.2rem;
@@ -64,7 +69,7 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: var(--space-sm);
 }
 
 @media (max-width: 575px) {
@@ -76,8 +81,8 @@ body {
 }
 
 .button {
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--space-xs);
   color: var(--font-clr);
   text-transform: uppercase;
   font-size: 1rem;
