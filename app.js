@@ -1,7 +1,7 @@
 const counterEl = document.querySelector('.counter');
 const decreaseEl = document.querySelector('.decrease');
 const increaseEl = document.querySelector('.increase');
-const reset = document.querySelector('.reset');
+const resetEl = document.querySelector('.reset');
 const stepEl = document.getElementById('step');
 
 let counter = 0;
@@ -28,6 +28,6 @@ increaseEl.addEventListener('click', () => {
   count('increase');
 });
 
-reset.addEventListener('click', () => {
+resetEl.addEventListener('click', () => {
   count(null);
 });
